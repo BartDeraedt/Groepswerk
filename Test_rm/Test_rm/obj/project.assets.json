@@ -454,30 +454,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bartdr\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Rosette\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C_TEMP\\SW\\.NET deel 1\\TVRM\\Test_rm\\Test_rm\\Test_rm.csproj",
+      "projectUniqueName": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\groepswerk_Bart\\Test_rm\\Test_rm\\Test_rm.csproj",
       "projectName": "Test_rm",
-      "projectPath": "C:\\C_TEMP\\SW\\.NET deel 1\\TVRM\\Test_rm\\Test_rm\\Test_rm.csproj",
-      "packagesPath": "C:\\Users\\Bartdr\\.nuget\\packages\\",
-      "outputPath": "C:\\C_TEMP\\SW\\.NET deel 1\\TVRM\\Test_rm\\Test_rm\\obj\\",
+      "projectPath": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\groepswerk_Bart\\Test_rm\\Test_rm\\Test_rm.csproj",
+      "packagesPath": "C:\\Users\\Rosette\\.nuget\\packages\\",
+      "outputPath": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\groepswerk_Bart\\Test_rm\\Test_rm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bartdr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rosette\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
@@ -525,7 +520,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

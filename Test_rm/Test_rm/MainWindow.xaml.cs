@@ -44,9 +44,13 @@ namespace Test_rm
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
             var repository = new Repository();
-            repository.RegisterButtonClick(sChannel);
-            txtChannelSend.Text = "";
-            sChannel = "";
+            if (sChannel != "")
+            {
+                repository.RegisterButtonClick(sChannel);
+                txtChannelSend.Text = "";
+                sChannel = "";
+            }
+
         }
 
         private void btnCommand_Click(object sender, RoutedEventArgs e)
