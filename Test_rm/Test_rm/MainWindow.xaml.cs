@@ -33,7 +33,7 @@ namespace Test_rm
 
         }
 
-        string sChannel;
+        string sChannel="";
         private void btnNumber_Click(object sender, RoutedEventArgs e)
         {
             var button = (Button)sender;
@@ -43,9 +43,9 @@ namespace Test_rm
 
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-            var repository = new Repository();
-            if (sChannel != "")
-            {
+            if (sChannel!="")
+            { 
+                var repository = new Repository();
                 repository.RegisterButtonClick(sChannel);
                 txtChannelSend.Text = "";
                 sChannel = "";

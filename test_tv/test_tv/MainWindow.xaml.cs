@@ -169,5 +169,21 @@ namespace test_tv
             string sCommand = button.Content.ToString();
             Checkcommand(sCommand);
         }
+
+        private void btnSource_Click(object sender, RoutedEventArgs e)
+        {
+            if (tv.Power)
+            {
+                tv.Sourcechange();
+                if (tv.Source == "TV")
+                {
+                    txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
+                }
+                else
+                {
+                    txtblockChannelnr.Text = tv.Source;
+                }
+            }
+        }
     }
 }

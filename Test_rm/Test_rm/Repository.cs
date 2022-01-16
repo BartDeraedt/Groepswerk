@@ -11,8 +11,8 @@ namespace Test_rm
     class Repository
     {
         // properties
-        const string _connectionStringTvRemote = @"Data source=localhost; Initial Catalog=TvRemote; User ID=sa; Password=1234578";
-        const string _connectionStringMaster = @"Data source=localhost; Initial Catalog=master; User ID=sa; Password=1234578";
+        const string _connectionStringTvRemote = @"Data source=localhost; Initial Catalog=TvRemote; User ID=sa; Password=123456789";
+        const string _connectionStringMaster = @"Data source=localhost; Initial Catalog=master; User ID=sa; Password=123456789";
         //const string _connectionStringTvRemote = @"Data source=DATWS203\NETX_SERVER_SQL; Initial Catalog=TvRemote; User ID=sa; Password=sa";
         //const string _connectionStringMaster = @"Data source=DATWS203\NETX_SERVER_SQL; Initial Catalog=master; User ID=sa; Password=sa";
 

@@ -11,7 +11,7 @@ namespace test_tv
     {
         // properties
         //const string _connectionString = @"Data source=DATWS203\NETX_SERVER_SQL; Initial Catalog=TvRemote; User ID=sa; Password=sa";
-        const string _connectionString = @"Data source=localhost; Initial Catalog=TvRemote; User ID=sa; Password=12345678";
+        const string _connectionString = @"Data source=localhost; Initial Catalog=TvRemote; User ID=sa; Password=123456789";
 
         // read command from table
         public string ReadCommand()
