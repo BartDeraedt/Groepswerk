@@ -6,27 +6,58 @@
         xmlns:local="clr-namespace:Test_rm"
         mc:Ignorable="d"
         Title="MainWindow" Height="520" Width="250">
-    <Grid Margin="-9,-1,9,1">
-        <Button x:Name="btn1" Content="1" HorizontalAlignment="Left" Margin="36,88,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn2" Content="2" HorizontalAlignment="Left" Margin="98,88,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn3" Content="3" HorizontalAlignment="Left" Margin="160,88,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="36,141,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn5" Content="5" HorizontalAlignment="Left" Margin="98,141,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn6" Content="6" HorizontalAlignment="Left" Margin="160,141,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="36,194,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="98,194,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="160,194,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="98,247,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
-        <Button x:Name="btnSend" Content="SEND" HorizontalAlignment="Left" Margin="37,42,0,0" VerticalAlignment="Top" FontSize="22" Width="76" Click="btnSend_Click"/>
-        <Button x:Name="btnPower" Content="POWER" HorizontalAlignment="Left" Margin="147,42,0,0" VerticalAlignment="Top" FontSize="22" Width="76" Click="btnCommand_Click"/>
-        <Button x:Name="btnVolup" Content="+" HorizontalAlignment="Left" Margin="36,331,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnCommand_Click"/>
-        <Button x:Name="btnVoldown" Content="-" HorizontalAlignment="Left" Margin="36,388,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnCommand_Click"/>
-        <Button x:Name="btnProgup" Content="^" HorizontalAlignment="Left" Margin="160,331,0,0" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnCommand_Click"/>
-        <Button x:Name="btnProgdown" Content="v" HorizontalAlignment="Left" Margin="160,388,0,0" VerticalAlignment="Top" FontSize="32" Width="60" Height="52" Click="btnCommand_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="53,313,0,0" Text="VOL" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="175,313,0,0" Text="PROG" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock x:Name="txtChannelSend" HorizontalAlignment="Left" Margin="53,18,0,0" Text="-" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="btnSource" Content="SOURCE" HorizontalAlignment="Left" Margin="92,445,0,0" VerticalAlignment="Top" FontSize="18" Width="76" Click="btnCommand_Click"/>
-
-    </Grid>
+    <StackPanel Width="250" >
+        <TextBlock x:Name="txtChannelSend" HorizontalAlignment="Left" Margin="53,5,0,5" Text="-" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <StackPanel Width="200" Orientation="Horizontal">
+            <Button x:Name="btnSend" Content="SEND" HorizontalAlignment="Left" Margin="2,0,0,10" VerticalAlignment="Top" FontSize="22" Width="76" Click="btnSend_Click"/>
+            <Grid Width="35">
+            </Grid>
+            <Button x:Name="btnPower" Content="POWER"  HorizontalAlignment="Right" Margin="2,0,0,10"  VerticalAlignment="Top" FontSize="22" Width="76" Click="btnCommand_Click"/>
+        </StackPanel>
+        <Grid Width="200" Height="245">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="btn1" Content="1" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn2" Content="2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn3" Content="3" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn4" Content="4" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn5" Content="5" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn6" Content="6" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn7" Content="7" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn8" Content="8" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn9" Content="9" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+            <Button x:Name="btn0" Content="0" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnNumber_Click"/>
+        </Grid>
+        <StackPanel Width="250" Orientation="Horizontal">
+            <TextBlock HorizontalAlignment="Left" Margin="45,0,0,0" Text="VOL" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Grid Width="110">
+            </Grid>
+            <TextBlock HorizontalAlignment="Left" Margin="0" Text="PROG" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
+        </StackPanel>
+        <Grid Width="200" Height="115">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="btnVolup" Grid.Row="0" Grid.Column="0" Content="+" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnCommand_Click"/>
+            <Button x:Name="btnVoldown" Grid.Row="1" Grid.Column="0" Content="-" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnCommand_Click"/>
+            <Button x:Name="btnProgup" Grid.Row="0" Grid.Column="2" Content="^" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="36" Width="60" Click="btnCommand_Click"/>
+            <Button x:Name="btnProgdown" Grid.Row="1" Grid.Column="2" Content="v" HorizontalAlignment="Left" Margin="2" VerticalAlignment="Top" FontSize="32" Width="60" Height="52" Click="btnCommand_Click"/>
+        </Grid>
+        <Button x:Name="btnSource" Content="SOURCE" HorizontalAlignment="Center" Margin="5" VerticalAlignment="Top" FontSize="18" Width="76" Click="btnCommand_Click"/>
+    </StackPanel>
 </Window>
