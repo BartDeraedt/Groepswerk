@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,13 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Test_rm
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+        Remote remote = new Remote();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,25 +35,24 @@ namespace Test_rm
             {
                 repository.CreateRepository();
             }
-
+            
         }
-
-        string sChannel="";
+        
         private void btnNumber_Click(object sender, RoutedEventArgs e)
         {
+            DataContext = remote;
             var button = (Button)sender;
-            sChannel += button.Content.ToString();
-            txtChannelSend.Text = sChannel;
+            remote.Channel += button.Content.ToString();
         }
 
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-            if (sChannel!="")
+            DataContext = remote;
+            if (remote.Channel != "")
             { 
                 var repository = new Repository();
-                repository.RegisterButtonClick(sChannel);
-                txtChannelSend.Text = "";
-                sChannel = "";
+                repository.RegisterButtonClick(remote.Channel);
+                remote.Channel = "";
             }
 
         }
@@ -56,9 +60,10 @@ namespace Test_rm
         private void btnCommand_Click(object sender, RoutedEventArgs e)
         {
             var button = (Button)sender;
-            string sCommand=button.Content.ToString();
+            //string sCommand=button.Content.ToString();
+            remote.Command = button.Content.ToString();
             var repository = new Repository();
-            repository.RegisterButtonClick(sCommand);
+            repository.RegisterButtonClick(remote.Command);
         }
 
     }
