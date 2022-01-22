@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:test_tv"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="800">
     <Grid>
-        <TextBlock x:Name="txtblockChannelnr" HorizontalAlignment="Left" Margin="651,30,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="80"/>
-        <Button x:Name="btnPower" Content="POWER" HorizontalAlignment="Left" Background="#FFDDDDDD" Margin="33,360,0,0" VerticalAlignment="Top" Click="btnPower_Click"/>
-        <TextBlock x:Name="txtblockVolume" HorizontalAlignment="Left" Margin="651,60,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="80"/>
-        <Button x:Name="btnVolup" Content="+" HorizontalAlignment="Left" Margin="96,364,0,0" VerticalAlignment="Top" Click="TV_Button_Click"/>
-        <Button x:Name="btnVoldown" Content="-" HorizontalAlignment="Left" Margin="96,384,0,0" VerticalAlignment="Top" Click="TV_Button_Click" Width="12"/>
-        <TextBlock HorizontalAlignment="Left" Margin="94,353,0,0" Text="VOL" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="8"/>
-        <Button x:Name="btnProgup" Content="^" HorizontalAlignment="Left" Margin="116,364,0,0" VerticalAlignment="Top" Click="TV_Button_Click"/>
-        <Button x:Name="btnProgdown" Content="v" HorizontalAlignment="Left" Margin="116,384,0,0" VerticalAlignment="Top" Click="TV_Button_Click" Width="12"/>
-        <TextBlock HorizontalAlignment="Left" Margin="114,353,0,0" Text="PROG" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="8"/>
-        <Button x:Name="btnSource" Content="SOURCE" HorizontalAlignment="Left" Background="#FFDDDDDD" Margin="33,385,0,0" VerticalAlignment="Top" Click="btnSource_Click" Width="44" FontSize="11"/>
+        <Image Source= "/images/tv.jpg" Stretch="Fill" />
+        <TextBlock x:Name="txtblockChannelnr" HorizontalAlignment="Left" Margin="625,66,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="80"/>
+        <Button x:Name="btnPower" Content="POWER" HorizontalAlignment="Left" Background="#FFDDDDDD" Margin="66,412,0,0" VerticalAlignment="Top" Click="btnPower_Click"/>
+        <TextBlock x:Name="txtblockVolume" HorizontalAlignment="Left" Margin="625,96,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="80"/>
+        <Button x:Name="btnVolup" Content="+" HorizontalAlignment="Left" Margin="129,416,0,0" VerticalAlignment="Top" Click="TV_Button_Click"/>
+        <Button x:Name="btnVoldown" Content="-" HorizontalAlignment="Left" Margin="129,436,0,0" VerticalAlignment="Top" Click="TV_Button_Click" Width="12"/>
+        <TextBlock HorizontalAlignment="Left" Margin="127,405,0,0" Text="VOL" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="8"/>
+        <Button x:Name="btnProgup" Content="^" HorizontalAlignment="Left" Margin="149,416,0,0" VerticalAlignment="Top" Click="TV_Button_Click"/>
+        <Button x:Name="btnProgdown" Content="v" HorizontalAlignment="Left" Margin="149,436,0,0" VerticalAlignment="Top" Click="TV_Button_Click" Width="12"/>
+        <TextBlock HorizontalAlignment="Left" Margin="147,405,0,0" Text="PROG" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="8"/>
+        <Button x:Name="btnSource" Content="SOURCE" HorizontalAlignment="Left" Background="#FFDDDDDD" Margin="66,437,0,0" VerticalAlignment="Top" Click="btnSource_Click" Width="44" FontSize="11"/>
     </Grid>
 </Window>
