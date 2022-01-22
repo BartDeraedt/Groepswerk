@@ -55,3 +55,4 @@ D:\DATA\Bart\Syntra_West\.NET deel 1\groepswerk_Bart\test_tv\test_tv\obj\Debug\n
 D:\DATA\Bart\Syntra_West\.NET deel 1\groepswerk_Bart\test_tv\test_tv\obj\Debug\net5.0-windows\ref\test_tv.dll
 D:\DATA\Bart\Syntra_West\.NET deel 1\groepswerk_Bart\test_tv\test_tv\obj\Debug\net5.0-windows\test_tv.pdb
 D:\DATA\Bart\Syntra_West\.NET deel 1\groepswerk_Bart\test_tv\test_tv\obj\Debug\net5.0-windows\test_tv.genruntimeconfig.cache
+D:\DATA\Bart\Syntra_West\.NET deel 1\groepswerk_Bart\test_tv\test_tv\obj\Debug\net5.0-windows\test_tv.csprojAssemblyReference.cache

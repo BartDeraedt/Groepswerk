@@ -151,8 +151,16 @@ namespace test_tv
             {
                 tv.Powerbutton();
                 btnPower.Background = Brushes.Green;
-                txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
+                if (tv.Source!="TV")
+                {
+                    txtblockChannelnr.Text = tv.Source;
+                }
+                else
+                {
+                    txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
+                }
                 txtblockVolume.Text = "Vol: " + tv.Volume.ToString();
+
             }
             else
             {
