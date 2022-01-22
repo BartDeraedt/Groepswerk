@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,7 +25,8 @@ namespace test_tv
     {
         BackgroundWorker bgWorker; int progress;
 
-        TV tv = new TV();
+         TV tv = new TV();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -44,10 +46,8 @@ namespace test_tv
         }
         private void bgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-
             while (true)
             {
-
                 var repository = new Repository();
                 string sCommando = repository.ReadCommand();
                 if (sCommando != "No command")
@@ -70,6 +70,7 @@ namespace test_tv
         {
             // code here for updating progress
             string sCommando = e.UserState.ToString();
+            DataContext = tv;
             Checkcommand(sCommando);
 
         }
@@ -84,6 +85,7 @@ namespace test_tv
 
         public void Checkcommand(string sCommando)
         {
+
             if (sCommando == "POWER")
             {
                 Power();
@@ -128,6 +130,10 @@ namespace test_tv
                                 txtblockChannelnr.Text = tv.Source;
                             }
                             break;
+                        case "SETTINGS":
+                            tv.Settings = !tv.Settings;
+                            Settings();
+                            break;
                         default:
                             if (tv.Source == "TV")
                             {
@@ -151,6 +157,15 @@ namespace test_tv
             {
                 tv.Powerbutton();
                 btnPower.Background = Brushes.Green;
+                if (tv.UseStartupsettings)
+                {
+                    tv.Channelnumber(tv.Startupchannel);
+                    tv.Volume = tv.Startupvolume;
+                    tv.Source = tv.Startupsource;
+                }
+
+
+
                 if (tv.Source!="TV")
                 {
                     txtblockChannelnr.Text = tv.Source;
@@ -168,11 +183,14 @@ namespace test_tv
                 btnPower.Background = Brushes.Gray;
                 txtblockChannelnr.Text = "";
                 txtblockVolume.Text = "";
+                Settings();
+                HideSettings();
             }
         }
 
         private void TV_Button_Click(object sender, RoutedEventArgs e)
         {
+ 
             var button = (Button)sender;
             string sCommand = button.Content.ToString();
             Checkcommand(sCommand);
@@ -180,6 +198,7 @@ namespace test_tv
 
         private void btnSource_Click(object sender, RoutedEventArgs e)
         {
+ 
             if (tv.Power)
             {
                 tv.Sourcechange();
@@ -192,6 +211,73 @@ namespace test_tv
                     txtblockChannelnr.Text = tv.Source;
                 }
             }
+        }
+
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            tv.Settings = !tv.Settings;
+            Settings();
+        }
+
+        private void Settings()
+        {
+            if (tv.Power)
+            {
+  
+                if (tv.Settings)
+                {
+                    labstartupchannel.Visibility = Visibility.Visible;
+                    ChkboxUse.Visibility = Visibility.Visible;
+                    txtStartupchannel.Visibility = Visibility.Visible;
+                    labstartupvolume.Visibility = Visibility.Visible;
+                    txtStartupvolume.Visibility = Visibility.Visible;
+                    labstartupsource.Visibility = Visibility.Visible;
+                    ComboboxSource.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    HideSettings();
+                }
+
+                tv.Startupchannel = Int32.Parse(txtStartupchannel.Text);
+                tv.Startupvolume = Int32.Parse(txtStartupvolume.Text);
+                tv.Startupsource = ComboboxSource.Text;
+
+            }
+        }
+
+        private void HideSettings()
+        {
+            labstartupchannel.Visibility = Visibility.Collapsed;
+            ChkboxUse.Visibility = Visibility.Collapsed;
+            txtStartupchannel.Visibility = Visibility.Collapsed;
+            labstartupvolume.Visibility = Visibility.Collapsed;
+            txtStartupvolume.Visibility = Visibility.Collapsed;
+            labstartupsource.Visibility = Visibility.Collapsed;
+            ComboboxSource.Visibility = Visibility.Collapsed;
+            tv.Settings = false;
+        }
+
+        private void ChkboxUse_Checked(object sender, RoutedEventArgs e)
+        {
+            tv.UseStartupsettings = true;
+            if (tv.UseStartupsettings)
+            {
+                tv.Startupchannel = Int32.Parse(txtStartupchannel.Text);
+                tv.Startupvolume = Int32.Parse(txtStartupvolume.Text);
+                tv.Startupsource = ComboboxSource.Text;
+            }
+        }
+
+        private void ChkboxUse_Unchecked(object sender, RoutedEventArgs e)
+        {
+            tv.UseStartupsettings = false;
+        }
+
+        private void txtStartupchannel_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
         }
     }
 }

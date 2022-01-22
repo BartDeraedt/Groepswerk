@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -8,12 +10,45 @@ using System.Windows;
 
 namespace test_tv
 {
-    class TV
+    public class TV : INotifyPropertyChanged
     {
         public bool Power { get; private set; }
-        public int Volume { get; private set; }
-        public int Channel { get; private set; }
-        public string Source { get; private set; }
+
+        private int _volume;
+        public int Volume
+        {
+            get { return _volume; }
+             set { _volume = value;
+                    RoepPropertyChangedOp();
+                 }
+        }
+
+        private int _channel;
+        public int Channel
+        {
+            get { return _channel; }
+            private set { _channel = value;
+                          RoepPropertyChangedOp();
+                        }
+        }
+
+        private string _source;
+        public string Source
+        {
+            get { return _source; }
+             set { 
+                   _source = value;
+                   RoepPropertyChangedOp();
+                 }
+        }
+
+        public bool Settings { get; set; }
+        public bool UseStartupsettings { get; set; }
+        public int Startupchannel { get; set; }
+        public int Startupvolume { get; set; }
+        public string Startupsource { get; set; }
+
+
 
         public TV()
         {
@@ -25,8 +60,9 @@ namespace test_tv
 
         public void Powerbutton()
         {
-            Power = !Power;            
+            Power = !Power;
         }
+
         public void Channelup()
         {
             if (Channel < 999)
@@ -89,6 +125,14 @@ namespace test_tv
             {
                 Channel = 999;
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void RoepPropertyChangedOp([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            
         }
 
     }

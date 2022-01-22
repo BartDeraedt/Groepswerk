@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\DATA\Bart\Syntra_West\.NET deel 1\groepswerk_Bart\test_tv\test_tv\obj\Debug\net5.0-windows\
+D:\DATA\Bart\Syntra_West\test_tv\test_tv\obj\Debug\net5.0-windows\
 test_tv
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\DATA\Bart\Syntra_West\.NET deel 1\groepswerk_Bart\test_tv\test_tv\App.xaml
+D:\DATA\Bart\Syntra_West\test_tv\test_tv\App.xaml
 11407045341
 11213501364
 7257409490
 194676909076
 MainWindow.xaml;
 
-True
+False
 
