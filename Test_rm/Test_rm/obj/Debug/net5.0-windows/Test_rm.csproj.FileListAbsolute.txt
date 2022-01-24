@@ -114,3 +114,31 @@ C:\C_TEMP\SW\.NET deel 1\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.dll
 C:\C_TEMP\SW\.NET deel 1\Test_rm\Test_rm\obj\Debug\net5.0-windows\ref\Test_rm.dll
 C:\C_TEMP\SW\.NET deel 1\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.pdb
 C:\C_TEMP\SW\.NET deel 1\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.genruntimeconfig.cache
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\Test_rm.exe
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\Test_rm.deps.json
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\Test_rm.runtimeconfig.json
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\Test_rm.runtimeconfig.dev.json
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\Test_rm.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\ref\Test_rm.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\Test_rm.pdb
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.csproj.AssemblyReference.cache
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\App.g.cs
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm_MarkupCompile.cache
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm_MarkupCompile.lref
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.g.resources
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.AssemblyInfoInputs.cache
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.AssemblyInfo.cs
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.csproj.CoreCompileInputs.cache
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\ref\Test_rm.dll
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.pdb
+C:\Syntra_west\groepswerk_Bart\Test_rm\Test_rm\obj\Debug\net5.0-windows\Test_rm.genruntimeconfig.cache

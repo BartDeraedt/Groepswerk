@@ -179,11 +179,11 @@ namespace test_tv
             }
             else
             {
+                Settings();
                 tv.Powerbutton(); 
                 btnPower.Background = Brushes.Gray;
                 txtblockChannelnr.Text = "";
                 txtblockVolume.Text = "";
-                Settings();
                 HideSettings();
             }
         }
