@@ -24,13 +24,14 @@ namespace test_tv
     public partial class MainWindow : Window
     {
         BackgroundWorker bgWorker; int progress;
-
-         TV tv = new TV();
+        public TV TV { get; set; }
+        TV tv = new TV();
 
         public MainWindow()
         {
             InitializeComponent();
             StartWorker();
+            DataContext = tv;
         }
         private void StartWorker()
         {
@@ -70,7 +71,6 @@ namespace test_tv
         {
             // code here for updating progress
             string sCommando = e.UserState.ToString();
-            DataContext = tv;
             Checkcommand(sCommando);
 
         }
@@ -85,7 +85,6 @@ namespace test_tv
 
         public void Checkcommand(string sCommando)
         {
-
             if (sCommando == "POWER")
             {
                 Power();
@@ -101,33 +100,33 @@ namespace test_tv
                             if (tv.Source == "TV")
                             {
                                 tv.Channelup();
-                                txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
                             }
                             break;
                         case "v":
                             if (tv.Source == "TV")
                             {
                                 tv.Channeldown();
-                                txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
                             }
                             break;
                         case "+":
                             tv.Volumeup();
-                            txtblockVolume.Text = "Vol: " + tv.Volume.ToString();
                             break;
                         case "-":
                             tv.Volumedown();
-                            txtblockVolume.Text = "Vol: " + tv.Volume.ToString();
                             break;
                         case "SOURCE":
                             tv.Sourcechange();
                             if (tv.Source == "TV")
                             {
-                                txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
+                                txtblockChannelnr.Visibility = Visibility.Visible;
+                                lblChannel.Visibility = Visibility.Visible;
+                                lblSource.Visibility = Visibility.Collapsed;
                             }
                             else
                             {
-                                txtblockChannelnr.Text = tv.Source;
+                                txtblockChannelnr.Visibility = Visibility.Collapsed;
+                                lblChannel.Visibility = Visibility.Collapsed;
+                                lblSource.Visibility = Visibility.Visible;
                             }
                             break;
                         case "SETTINGS":
@@ -138,7 +137,6 @@ namespace test_tv
                             if (tv.Source == "TV")
                             {
                                 tv.Channelnumber(int.Parse(sCommando));
-                                txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
                             }
                             break;
                     }
@@ -157,6 +155,10 @@ namespace test_tv
             {
                 tv.Powerbutton();
                 btnPower.Background = Brushes.Green;
+                txtblockChannelnr.Visibility= Visibility.Visible;
+                txtblockVolume.Visibility = Visibility.Visible;
+                lblChannel.Visibility = Visibility.Visible;
+                lblVolume.Visibility = Visibility.Visible;
                 if (tv.UseStartupsettings)
                 {
                     tv.Channelnumber(tv.Startupchannel);
@@ -168,22 +170,28 @@ namespace test_tv
 
                 if (tv.Source!="TV")
                 {
-                    txtblockChannelnr.Text = tv.Source;
+                    txtblockChannelnr.Visibility = Visibility.Collapsed;
+                    lblChannel.Visibility = Visibility.Collapsed;
+                    lblSource.Visibility = Visibility.Visible;
                 }
                 else
                 {
-                    txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
+                    txtblockChannelnr.Visibility = Visibility.Visible;
+                    lblChannel.Visibility = Visibility.Visible;
+                    lblSource.Visibility = Visibility.Collapsed;
                 }
-                txtblockVolume.Text = "Vol: " + tv.Volume.ToString();
 
             }
             else
             {
                 Settings();
-                tv.Powerbutton(); 
+                tv.Powerbutton();
+                txtblockChannelnr.Visibility = Visibility.Collapsed;
+                txtblockVolume.Visibility = Visibility.Collapsed;
+                lblChannel.Visibility = Visibility.Collapsed;
+                lblVolume.Visibility = Visibility.Collapsed;
+                lblSource.Visibility = Visibility.Collapsed;
                 btnPower.Background = Brushes.Gray;
-                txtblockChannelnr.Text = "";
-                txtblockVolume.Text = "";
                 HideSettings();
             }
         }
@@ -204,11 +212,15 @@ namespace test_tv
                 tv.Sourcechange();
                 if (tv.Source == "TV")
                 {
-                    txtblockChannelnr.Text = "Ch: " + tv.Channel.ToString();
+                    txtblockChannelnr.Visibility = Visibility.Visible;
+                    lblChannel.Visibility = Visibility.Visible;
+                    lblSource.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
-                    txtblockChannelnr.Text = tv.Source;
+                    txtblockChannelnr.Visibility = Visibility.Collapsed;
+                    lblChannel.Visibility = Visibility.Collapsed;
+                    lblSource.Visibility = Visibility.Visible;
                 }
             }
         }

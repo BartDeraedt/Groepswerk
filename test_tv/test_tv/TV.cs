@@ -11,10 +11,18 @@ using System.Windows;
 namespace test_tv
 {
     public class TV : INotifyPropertyChanged
-    {
-        public bool Power { get; private set; }
+    { private bool _power;
+        public bool Power
+        {
+            get { return _power; }
+            private set
+            {
+                _power = value;
+                RoepPropertyChangedOp();
+            }
+        }
 
-        private int _volume;
+    private int _volume;
         public int Volume
         {
             get { return _volume; }

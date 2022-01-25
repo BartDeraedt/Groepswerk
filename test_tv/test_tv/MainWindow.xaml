@@ -8,9 +8,12 @@
         Title="MainWindow" Height="500" Width="800">
     <Grid>
         <Image Source= "/images/tv.jpg" Stretch="Fill" />
-        <TextBlock x:Name="txtblockChannelnr" HorizontalAlignment="Left" Margin="625,66,0,0" Text="{Binding Path=Channel,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="80"/>
+        <TextBlock x:Name="txtblockChannelnr" HorizontalAlignment="Left" Margin="625,66,0,0" Text="{Binding Channel,UpdateSourceTrigger=PropertyChanged}" Visibility="Collapsed" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="80"/>
+        <Label x:Name="lblChannel"  Content="Ch: " HorizontalAlignment="Left" Margin="594,62,0,0" VerticalAlignment="Top" Visibility="Collapsed" />
+        <Label x:Name="lblSource"  Content="{Binding Source,UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Margin="594,62,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
         <Button x:Name="btnPower" Content="POWER" HorizontalAlignment="Left" Background="#FFDDDDDD" Margin="66,412,0,0" VerticalAlignment="Top" Click="btnPower_Click"/>
-        <TextBlock x:Name="txtblockVolume" HorizontalAlignment="Left" Margin="625,96,0,0" Text="{Binding Volume,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="80"/>
+        <TextBlock x:Name="txtblockVolume" HorizontalAlignment="Left" Margin="625,96,0,0" Text="{Binding Volume,UpdateSourceTrigger=PropertyChanged}" Visibility="Collapsed" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="80"/>
+        <Label x:Name="lblVolume"  Content="Vol: "  HorizontalAlignment="Left" Margin="594,91,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
         <Button x:Name="btnVolup" Content="+" HorizontalAlignment="Left" Margin="129,416,0,0" VerticalAlignment="Top" Click="TV_Button_Click"/>
         <Button x:Name="btnVoldown" Content="-" HorizontalAlignment="Left" Margin="129,436,0,0" VerticalAlignment="Top" Click="TV_Button_Click" Width="12"/>
         <TextBlock HorizontalAlignment="Left" Margin="127,405,0,0" Text="VOL" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="8"/>
