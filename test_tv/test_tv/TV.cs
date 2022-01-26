@@ -50,12 +50,51 @@ namespace test_tv
                  }
         }
 
-        public bool Settings { get; set; }
-        public bool UseStartupsettings { get; set; }
-        public int Startupchannel { get; set; }
-        public int Startupvolume { get; set; }
-        public string Startupsource { get; set; }
+        private bool _settings;
+        public bool Settings
+        {
+            get { return _settings; }
+            set { _settings = value;
+                RoepPropertyChangedOp();
+                }
+        }
 
+        private bool _usestartupsettings;
+        public bool UseStartupsettings
+        {
+            get { return _usestartupsettings; }
+            set { _usestartupsettings = value;
+                RoepPropertyChangedOp();
+                }
+        }
+
+
+        private int _startupchannel;
+        public int Startupchannel
+        {
+            get { return _startupchannel; }
+            set { _startupchannel = value;
+                RoepPropertyChangedOp();
+                }
+        }
+
+        private int _startupvolume;
+        public int Startupvolume
+        {
+            get { return _startupvolume; }
+            set { _startupvolume = value;
+                RoepPropertyChangedOp();
+            }
+        }
+
+        private string _startupsource;
+        public string Startupsource
+        {
+            get { return _startupsource; }
+            set { _startupsource = value;
+                RoepPropertyChangedOp();
+            }
+        }
 
 
         public TV()
@@ -64,6 +103,9 @@ namespace test_tv
             Volume = 20;
             Channel = 1;
             Source = "TV";
+            Startupchannel = 1;
+            Startupvolume = 20;
+            Startupsource = "TV";
         }
 
         public void Powerbutton()

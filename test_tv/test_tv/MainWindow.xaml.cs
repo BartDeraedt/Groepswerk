@@ -116,22 +116,10 @@ namespace test_tv
                             break;
                         case "SOURCE":
                             tv.Sourcechange();
-                            if (tv.Source == "TV")
-                            {
-                                txtblockChannelnr.Visibility = Visibility.Visible;
-                                lblChannel.Visibility = Visibility.Visible;
-                                lblSource.Visibility = Visibility.Collapsed;
-                            }
-                            else
-                            {
-                                txtblockChannelnr.Visibility = Visibility.Collapsed;
-                                lblChannel.Visibility = Visibility.Collapsed;
-                                lblSource.Visibility = Visibility.Visible;
-                            }
+                            Sourcesettings();
                             break;
                         case "SETTINGS":
                             tv.Settings = !tv.Settings;
-                            Settings();
                             break;
                         default:
                             if (tv.Source == "TV")
@@ -155,18 +143,13 @@ namespace test_tv
             {
                 tv.Powerbutton();
                 btnPower.Background = Brushes.Green;
-                txtblockChannelnr.Visibility= Visibility.Visible;
-                txtblockVolume.Visibility = Visibility.Visible;
-                lblChannel.Visibility = Visibility.Visible;
-                lblVolume.Visibility = Visibility.Visible;
+
                 if (tv.UseStartupsettings)
                 {
                     tv.Channelnumber(tv.Startupchannel);
                     tv.Volume = tv.Startupvolume;
                     tv.Source = tv.Startupsource;
                 }
-
-
 
                 if (tv.Source!="TV")
                 {
@@ -184,15 +167,12 @@ namespace test_tv
             }
             else
             {
-                Settings();
                 tv.Powerbutton();
+                tv.Settings = false;
                 txtblockChannelnr.Visibility = Visibility.Collapsed;
-                txtblockVolume.Visibility = Visibility.Collapsed;
                 lblChannel.Visibility = Visibility.Collapsed;
-                lblVolume.Visibility = Visibility.Collapsed;
                 lblSource.Visibility = Visibility.Collapsed;
                 btnPower.Background = Brushes.Gray;
-                HideSettings();
             }
         }
 
@@ -206,7 +186,12 @@ namespace test_tv
 
         private void btnSource_Click(object sender, RoutedEventArgs e)
         {
- 
+            Sourcesettings();
+        }
+
+
+        private void Sourcesettings()
+        {
             if (tv.Power)
             {
                 tv.Sourcechange();
@@ -225,65 +210,10 @@ namespace test_tv
             }
         }
 
+
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
             tv.Settings = !tv.Settings;
-            Settings();
-        }
-
-        private void Settings()
-        {
-            if (tv.Power)
-            {
-  
-                if (tv.Settings)
-                {
-                    labstartupchannel.Visibility = Visibility.Visible;
-                    ChkboxUse.Visibility = Visibility.Visible;
-                    txtStartupchannel.Visibility = Visibility.Visible;
-                    labstartupvolume.Visibility = Visibility.Visible;
-                    txtStartupvolume.Visibility = Visibility.Visible;
-                    labstartupsource.Visibility = Visibility.Visible;
-                    ComboboxSource.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    HideSettings();
-                }
-
-                tv.Startupchannel = Int32.Parse(txtStartupchannel.Text);
-                tv.Startupvolume = Int32.Parse(txtStartupvolume.Text);
-                tv.Startupsource = ComboboxSource.Text;
-
-            }
-        }
-
-        private void HideSettings()
-        {
-            labstartupchannel.Visibility = Visibility.Collapsed;
-            ChkboxUse.Visibility = Visibility.Collapsed;
-            txtStartupchannel.Visibility = Visibility.Collapsed;
-            labstartupvolume.Visibility = Visibility.Collapsed;
-            txtStartupvolume.Visibility = Visibility.Collapsed;
-            labstartupsource.Visibility = Visibility.Collapsed;
-            ComboboxSource.Visibility = Visibility.Collapsed;
-            tv.Settings = false;
-        }
-
-        private void ChkboxUse_Checked(object sender, RoutedEventArgs e)
-        {
-            tv.UseStartupsettings = true;
-            if (tv.UseStartupsettings)
-            {
-                tv.Startupchannel = Int32.Parse(txtStartupchannel.Text);
-                tv.Startupvolume = Int32.Parse(txtStartupvolume.Text);
-                tv.Startupsource = ComboboxSource.Text;
-            }
-        }
-
-        private void ChkboxUse_Unchecked(object sender, RoutedEventArgs e)
-        {
-            tv.UseStartupsettings = false;
         }
 
         private void txtStartupchannel_PreviewTextInput(object sender, TextCompositionEventArgs e)
