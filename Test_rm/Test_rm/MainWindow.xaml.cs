@@ -25,6 +25,7 @@ namespace Test_rm
     public partial class MainWindow : Window
     {
         Remote remote = new Remote();
+        DateTime now;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace Test_rm
             {
                 repository.CreateRepository();
             }
-            
+            //ListChangelog.ItemsSource = remote.Changelog;
         }
         
         private void btnNumber_Click(object sender, RoutedEventArgs e)
@@ -52,7 +53,10 @@ namespace Test_rm
             { 
                 var repository = new Repository();
                 repository.RegisterButtonClick(remote.Channel);
+                now = DateTime.Now;
+                remote.Changelog.Add(now.ToString() + "  Ch: " +  remote.Channel);
                 remote.Channel = "";
+   
             }
 
         }
@@ -64,6 +68,8 @@ namespace Test_rm
             remote.Command = button.Content.ToString();
             var repository = new Repository();
             repository.RegisterButtonClick(remote.Command);
+            now = DateTime.Now;
+            remote.Changelog.Add(now.ToString() + "  " + remote.Command);
         }
 
     }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test_rm" d:DataContext="{d:DesignInstance Type=local:Remote}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="560" Width="250">
+        Title="MainWindow" Height="720" Width="255">
     <StackPanel Width="250" >
         <TextBlock x:Name="txtChannelSend"  HorizontalAlignment="Left" Margin="53,5,0,5" Text="{Binding Channel,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <StackPanel Width="200" Orientation="Horizontal">
@@ -60,5 +60,8 @@
         </Grid>
         <Button x:Name="btnSource" Content="SOURCE" HorizontalAlignment="Center" Margin="5" VerticalAlignment="Top" FontSize="18" Width="76" Click="btnCommand_Click"/>
         <Button x:Name="btnSettings" Content="SETTINGS" HorizontalAlignment="Center" Margin="5" VerticalAlignment="Top" FontSize="17" Width="76" Click="btnCommand_Click"/>
+        <Border BorderThickness="2" BorderBrush="Black" Margin="1" Width="199">
+            <ListView x:Name="ListChangelog" ItemsSource="{Binding Changelog}" Height="140" HorizontalAlignment="Center" Width="199"/>
+        </Border>
     </StackPanel>
 </Window>
