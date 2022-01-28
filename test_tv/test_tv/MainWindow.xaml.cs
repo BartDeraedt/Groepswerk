@@ -172,7 +172,8 @@ namespace test_tv
                 txtblockChannelnr.Visibility = Visibility.Collapsed;
                 lblChannel.Visibility = Visibility.Collapsed;
                 lblSource.Visibility = Visibility.Collapsed;
-                btnPower.Background = Brushes.Gray;
+                btnPower.Background = new SolidColorBrush(Color.FromArgb(0xFF,0xDD, 0xDD, 0xDD));
+                //#FFF4F4F4
             }
         }
 
@@ -213,7 +214,10 @@ namespace test_tv
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            tv.Settings = !tv.Settings;
+            if (tv.Power)
+            {
+                tv.Settings = !tv.Settings;
+            }
         }
 
         private void txtStartupchannel_PreviewTextInput(object sender, TextCompositionEventArgs e)
