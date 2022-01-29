@@ -63,6 +63,7 @@ namespace Test_rm
 
         private void btnCommand_Click(object sender, RoutedEventArgs e)
         {
+            DataContext = remote;
             var button = (Button)sender;
             //string sCommand=button.Content.ToString();
             remote.Command = button.Content.ToString();

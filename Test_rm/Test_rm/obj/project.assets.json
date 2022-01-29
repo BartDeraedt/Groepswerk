@@ -460,11 +460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\Test_rm\\Test_rm\\Test_rm.csproj",
+      "projectUniqueName": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\groepswerk_Bart\\Test_rm\\Test_rm\\Test_rm.csproj",
       "projectName": "Test_rm",
-      "projectPath": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\Test_rm\\Test_rm\\Test_rm.csproj",
+      "projectPath": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\groepswerk_Bart\\Test_rm\\Test_rm\\Test_rm.csproj",
       "packagesPath": "C:\\Users\\Rosette\\.nuget\\packages\\",
-      "outputPath": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\Test_rm\\Test_rm\\obj\\",
+      "outputPath": "D:\\DATA\\Bart\\Syntra_West\\.NET deel 1\\groepswerk_Bart\\Test_rm\\Test_rm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
