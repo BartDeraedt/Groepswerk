@@ -82,11 +82,11 @@
                     </Style.Triggers>
                 </Style>
             </Canvas.Style>
-            <TextBox x:Name="txtStartupchannel" MaxLength="3" HorizontalAlignment="Left" Margin="225,126,0,0" Text="{Binding Startupchannel,UpdateSourceTrigger=PropertyChanged}" BorderThickness="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" />
+            <TextBox x:Name="txtStartupchannel" MaxLength="3" HorizontalAlignment="Left" Margin="225,126,0,0" Text="{Binding Startupchannel,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="txtbox_PreviewTextInput" BorderThickness="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" />
             <Label x:Name="labstartupchannel" Content="StartupChannel" HorizontalAlignment="Left" Margin="129,121,0,0" VerticalAlignment="Top" />
             <CheckBox x:Name="ChkboxUse" Content="Use startup settings" HorizontalAlignment="Left" Margin="143,109,0,0" VerticalAlignment="Top"  IsChecked="{Binding UseStartupsettings,UpdateSourceTrigger=PropertyChanged}"/>
             <Label x:Name="labstartupvolume"  Content="StartupVolume"   HorizontalAlignment="Left" Margin="129,147,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtStartupvolume" MaxLength="2" HorizontalAlignment="Left" Margin="225,150,0,0" Text="{Binding Startupvolume,UpdateSourceTrigger=PropertyChanged}" BorderThickness="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" />
+            <TextBox x:Name="txtStartupvolume" MaxLength="2" HorizontalAlignment="Left" Margin="225,150,0,0" Text="{Binding Startupvolume,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="txtbox_PreviewTextInput" BorderThickness="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" />
             <ComboBox x:Name="ComboboxSource"  HorizontalAlignment="Left"  Text="{Binding Startupsource,UpdateSourceTrigger=PropertyChanged}" Margin="225,175,0,0" VerticalAlignment="Top"  Width="71">
                 <ComboBoxItem Content="TV"/>
                 <ComboBoxItem Content="HDMI1"/>

@@ -115,7 +115,6 @@ namespace test_tv
                             tv.Volumedown();
                             break;
                         case "SOURCE":
-                            tv.Sourcechange();
                             Sourcesettings();
                             break;
                         case "SETTINGS":
@@ -220,7 +219,7 @@ namespace test_tv
             }
         }
 
-        private void txtStartupchannel_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        private void txtbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             var textBox = sender as TextBox;
             e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
